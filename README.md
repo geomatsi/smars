@@ -9,15 +9,13 @@ Resources:
 ## SMARS, [WeMos](https://wiki.wemos.cc/products:d1:d1_mini), and [NodeMCU](https://github.com/nodemcu/nodemcu-firmware)
 
 ### Brief NodeMCU HOWTO
-NodeMCU project provides an excellent [documentation](https://nodemcu.readthedocs.io), so no need to go into much details here.
-In brief, do the following three steps:
-
-1. Get firmware source code
+NodeMCU project provides an excellent [documentation](https://nodemcu.readthedocs.io), so no need to go into much details here. In brief, do the following steps to build and flash firmware image to WeMos D1 mini board:
+* Get firmware source code
 ```bash
 $ git clone https://github.com/nodemcu/nodemcu-firmware.git
 ```
-2. Customize NodeMCU firmware image
-Enable the following options in _app/include/user_modules.h_:
+* Customize NodeMCU firmware image
+  Enable the following options in _app/include/user_modules.h_:
 ```bash
 #define LUA_USE_MODULES_BIT
 #define LUA_USE_MODULES_FILE
@@ -33,12 +31,12 @@ Enable the following options in _app/include/user_modules.h_:
 #define LUA_USE_MODULES_WEBSOCKET
 #define LUA_USE_MODULES_WIFI
 ```
-3. Build firmware
+* Build firmware
 Build NodeMCU firmware:
 ```bash
 $ make
 ```
-4. Flash firmware
+* Flash firmware
 Flash NodeMCU firmware to WeMos D1 mini board:
 ```bash
 $ sudo ./tools/toolchains/esptool.py --port /dev/ttyUSB0 write_flash -fm dio -fs 32m 0x00000 bin/0x00000.bin 0x10000 bin/0x10000.bin
