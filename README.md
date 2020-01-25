@@ -2,8 +2,17 @@
 
 SMARS is a simple 3D printed robot designed for the educational field. This is the acronym of “Screwless/Screwed Modular Robotic System”.
 
-Resources:
-[SMARS 3D files on Thingiverse](https://www.thingiverse.com/thing:2662828)
+This is how it is supposed to look like
+
+![alt text](pics/smars1.jpg)
+
+And this is how it looks in my case :-)
+
+![alt text](pics/smars2.jpg)
+
+### Resources
+
+* [SMARS 3D files on Thingiverse](https://www.thingiverse.com/thing:2662828)
 
 
 ## SMARS, [WeMos](https://wiki.wemos.cc/products:d1:d1_mini), and [NodeMCU](https://github.com/nodemcu/nodemcu-firmware)
